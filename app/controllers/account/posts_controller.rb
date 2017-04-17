@@ -4,9 +4,4 @@ class Account::PostsController < ApplicationController
     @posts = current_user.posts
   end
 
-  def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to account_posts_path, alert: "Post deleted"
-  end
 end
